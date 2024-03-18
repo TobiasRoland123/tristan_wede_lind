@@ -1,0 +1,413 @@
+@import 'variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.986rem;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+p {
+  line-height: 25px;
+}
+
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header:first-of-type {
+  background-color: var(--headerFooterCol);
+  color: var(--yellowCol);
+  padding: 1rem;
+}
+.tristan-img {
+  display: none;
+}
+header:first-of-type select {
+  margin-top: 1rem;
+}
+
+nav {
+  background-color: var(--navCol);
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+nav ul li {
+  width: 100%;
+  border-bottom: 1px solid var(--yellowCol);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: var(--whiteCol);
+  font-size: 2.3rem;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+section:first-of-type {
+  padding: 0;
+  margin-top: 0;
+}
+section:first-of-type article {
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+section:first-of-type > header {
+  color: var(--blackCol);
+}
+
+section:first-of-type > header {
+  background-color: var(--yellowCol);
+  padding-top: 0.2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+section:first-of-type > header div h2 {
+  padding: 1rem 0.5rem;
+  margin-inline: 2rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  border-radius: 0.5rem;
+  background-color: var(--accentCol);
+  color: var(--whiteCol);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:first-of-type > header div h3 {
+  font-weight: 300;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+section:first-of-type > header div h4 {
+  text-align: center;
+  font-weight: 100;
+  margin-top: 0.5rem;
+}
+
+section:first-of-type > header img {
+  aspect-ratio: 9/16;
+  background-color: white;
+  padding: 0.5rem;
+  max-width: 10rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+blockquote {
+  background-color: var(--navCol);
+  padding: 1rem;
+  color: var(--whiteCol);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+cite {
+  margin-top: 1rem;
+  display: inline-block;
+
+  width: 100%;
+  text-align: end;
+}
+
+#on-tour img {
+  object-fit: cover;
+  padding: 1rem;
+  aspect-ratio: 16/9;
+}
+
+.link-up {
+  width: 100%;
+  display: inline-block;
+  text-align: end;
+  padding-right: 2rem;
+  font-size: 5rem;
+}
+
+#presentation-list {
+  padding: 0 1rem;
+}
+
+.presentation-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--yellowCol);
+}
+
+.presentation-item > div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.presentation-item h3 {
+  color: var(--headerFooterCol);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.presentation-item > p {
+  font-weight: 100;
+}
+
+#presentation-list > .presentation-item:last-of-type {
+  border-bottom: none;
+}
+
+#book-list {
+  padding: 1rem;
+}
+
+.book {
+  display: flex;
+  flex-flow: column;
+  border-bottom: 1px solid var(--yellowCol);
+  padding: 0 0 1rem 0;
+}
+
+.book:last-of-type {
+  border-bottom: none;
+}
+
+.book img {
+  margin-top: 1rem;
+  align-self: center;
+
+  max-width: 15rem;
+}
+
+.book .title {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.book .sub-title {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.book .book-description {
+  margin-top: 1rem;
+}
+
+#employee-list {
+  margin-top: 1rem;
+}
+
+#employee-list {
+  padding: 1rem;
+}
+
+#employee-list li {
+  border-bottom: 1px solid var(--yellowCol);
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 1rem;
+}
+
+#employee-list li:last-of-type {
+  border: none;
+  margin-top: 1rem;
+}
+
+#employee-list li img {
+  align-self: center;
+  border-radius: 100%;
+  max-width: 10rem;
+}
+
+#employee-list li h3 {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+#employee-list li .role {
+  margin-top: 1rem;
+}
+
+#employee-list li a {
+  color: var(--navCol);
+}
+form {
+  padding: 1rem;
+}
+
+.contact-confrence {
+  display: none;
+}
+fieldset {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+fieldset div {
+  display: flex;
+  flex-flow: column;
+}
+
+input[type='submit'] {
+  /* CSS styles for the input with type submit */
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+}
+
+input {
+  border-radius: 0.3rem;
+  border: 1px solid var(--blackCol);
+  border-bottom: 1px solid var(--blackCol);
+}
+
+textarea {
+  border-radius: 0.3rem;
+  border: 1px solid var(--blackCol) !important;
+}
+
+label {
+  margin-top: 0.3rem;
+}
+
+footer {
+  background-color: var(--headerFooterCol);
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  color: var(--whiteCol);
+}
+footer a {
+  color: var(--whiteCol);
+}
+footer > div {
+  gap: 0.5rem;
+  display: flex;
+}
+footer > div:first-of-type img {
+  max-width: 5rem;
+}
+
+footer > div:first-of-type p {
+  flex-shrink: 0;
+}
+#some {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+#some > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#some > li img {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+footer ul:last-of-type {
+  margin-top: 1rem;
+}
+
+#credits {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+#credits a {
+  color: var(--yellowCol);
+}
+
+footer small {
+  margin-top: 1rem;
+  color: var(--yellowCol);
+}
+/* ###############################3   TABLET ######################################  */
+@media (min-width: 768px) {
+  header:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tristan-img {
+    display: block;
+    border-radius: 100%;
+    max-width: 5rem;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  header:first-of-type > select {
+    height: fit-content;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  #new-releases header {
+    display: flex;
+    flex-flow: row;
+  }
+
+  #new-releases header h2 {
+    max-width: 20rem;
+  }
+}
