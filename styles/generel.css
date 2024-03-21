@@ -487,7 +487,7 @@ footer small {
   }
 
   #description-img-wrapper img {
-    height: 60%;
+    width: 200px;
   }
   .only-on-desktop {
     display: block;
@@ -520,5 +520,9 @@ footer small {
   }
   .book:last-of-type {
     border-bottom: 1px solid var(--yellowCol);
+  }
+
+  #on-tour img {
+    aspect-ratio: 21/6;
   }
 }
