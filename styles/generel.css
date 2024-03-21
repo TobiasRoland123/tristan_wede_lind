@@ -155,10 +155,18 @@ cite {
   text-align: end;
 }
 
+#description-img-wrapper {
+  display: none;
+}
+
 #on-tour img {
   object-fit: cover;
   padding: 1rem;
   aspect-ratio: 16/9;
+}
+
+.only-on-desktop {
+  display: none;
 }
 
 .link-up {
@@ -409,5 +417,108 @@ footer small {
 
   #new-releases header h2 {
     max-width: 20rem;
+  }
+
+  .book {
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+
+  #employee-list li {
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  #employee-list li div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 800px) {
+  #new-releases article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'text text text img-wrap';
+    gap: 1rem;
+  }
+  #new-releases article div:first-of-type {
+    grid-area: text;
+  }
+  #description-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-area: img-wrap;
+  }
+
+  #description-img-wrapper div {
+    padding: 1rem;
+  }
+
+  #description-img-wrapper h3 {
+    font-size: 1.2rem;
+  }
+
+  .description-img-text {
+    text-align: center;
+  }
+
+  .contact-confrence {
+    display: block;
+    grid-area: img;
+    padding: 1rem 1rem 0;
+  }
+
+  .contactonly {
+    grid-area: contact;
+  }
+
+  .contact-with-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'contact img';
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #description-img-wrapper {
+    display: grid;
+  }
+
+  #description-img-wrapper img {
+    height: 60%;
+  }
+  .only-on-desktop {
+    display: block;
+  }
+
+  #presentation-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .presentation-item {
+    border: 1px solid var(--yellowCol);
+    border-radius: 0.5rem;
+  }
+
+  #presentation-list > .presentation-item:last-of-type {
+    border: 1px solid var(--yellowCol);
+  }
+
+  #book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .book {
+    border-radius: 0.5rem;
+    border: 1px solid var(--yellowCol);
+    padding: 1rem;
+  }
+  .book:last-of-type {
+    border-bottom: 1px solid var(--yellowCol);
   }
 }
