@@ -323,6 +323,12 @@ label {
 
 footer {
   background-color: var(--headerFooterCol);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
   padding: 1rem;
   display: flex;
   flex-flow: column;
@@ -332,6 +338,21 @@ footer {
 }
 footer a {
   color: var(--whiteCol);
+}
+
+.kea-publish {
+  display: flex;
+  gap: 1rem;
+}
+
+.publish_and_some {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+small {
+  margin-bottom: 1rem;
 }
 footer > div {
   gap: 0.5rem;
@@ -432,6 +453,12 @@ footer small {
   #employee-list li div {
     display: flex;
     flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
   }
 }
 
